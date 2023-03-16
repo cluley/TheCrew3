@@ -2,12 +2,12 @@
 
 BootsAWD::BootsAWD() : Vehicle() {
 	name = "Ботинки-вездеходы";
-	speed = 6;
+	speed = 6.0;
 	moveTime = 60;
 }
 
 void BootsAWD::racing(int distance) {
-	result = distance / speed;
+	result = distance / double(speed);
 	int stops = result / moveTime;
 	double stopsTime;
 

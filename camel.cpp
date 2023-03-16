@@ -2,12 +2,12 @@
 
 Camel::Camel() : Vehicle() {
 	name = "Верблюд";
-	speed = 10;
+	speed = 10.0;
 	moveTime = 30;
 }
 
 void Camel::racing(int distance) {
-	result = distance / speed;
+	result = distance / double(speed);
 	int stops = result / moveTime;
 	double stopsTime;
 

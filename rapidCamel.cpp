@@ -2,12 +2,12 @@
 
 RapidCamel::RapidCamel() : Vehicle() {
 	name = "Верблюд-быстроход";
-	speed = 40;
+	speed = 40.0;
 	moveTime = 10;
 }
 
 void RapidCamel::racing(int distance) {
-	result = distance / speed;
+	result = distance / double(speed);
 	int stops = result / moveTime;
 	double stopsTime;
 
@@ -23,7 +23,7 @@ void RapidCamel::racing(int distance) {
 	else if (stops == 2) {
 		stopsTime = 11.5;
 	}
-	else if (stops > 2 && (int(result) % moveTime)) { 
+	else if (stops > 2 && (int(result) % moveTime) == 0) { 
 		stopsTime = 11.5; 
 	}
 	else if (stops > 2) {
